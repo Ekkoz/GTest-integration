@@ -8,8 +8,6 @@ configuration:
   - Release
   - Debug
 
-install: off
-
 before_build:
   - cmake .
 
