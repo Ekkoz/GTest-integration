@@ -8,12 +8,14 @@ configuration:
 
 before_build:
   - cmake -G "Visual Studio 15 2017 Win64" .
-  - dir
-  - cd src && dir && cd ..
-  - cd test && dir && cd ..
 
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\Euclide.sln
+
+after_build:
+  - dir
+  - cd src && dir && cd ..
+  - cd test && dir && cd ..
 
 test_script:
   - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\euclide_tests.exe'
