@@ -18,4 +18,4 @@ after_build:
   - cd test && dir Release && cd ..
 
 test_script:
-  - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\euclide_tests.exe'
+  - '%APPVEYOR_BUILD_FOLDER%\test\%CONFIGURATION%\euclide_tests.exe'
