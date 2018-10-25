@@ -12,10 +12,5 @@ before_build:
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\Euclide.sln
 
-after_build:
-  - dir bin
-  - cd src && dir Release && cd ..
-  - cd test && dir Release && cd ..
-
 test_script:
   - '%APPVEYOR_BUILD_FOLDER%\test\%CONFIGURATION%\euclide_tests.exe'
