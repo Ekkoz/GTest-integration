@@ -15,7 +15,7 @@ before_build:
   - cd test && dir && cd ..
 
 build:
-  project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
+  project: $(APPVEYOR_BUILD_FOLDER)\Euclide.sln
 
 test_script:
   - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\euclide_tests.exe'
