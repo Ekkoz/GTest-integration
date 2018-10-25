@@ -10,6 +10,9 @@ configuration:
 
 before_build:
   - cmake .
+  - dir
+  - cd src && dir && cd ..
+  - cd test && dir && cd ..
 
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
